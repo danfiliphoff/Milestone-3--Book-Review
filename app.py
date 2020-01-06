@@ -5,7 +5,9 @@ from bson.objectid import ObjectId
 
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'books'
-app.config["MONGO_URI"] = 'mongodb+srv://danhoff:jagersnart21@bookscluster-pabzd.mongodb.net/books?retryWrites=true&w=majority'
+#förösk spara danhoff:UrSEzkJwRg0yELxb i environmental variabel så att lösenord ej syns på github
+app.config["MONGO_URI"] = mongodb+srv://danhoff:UrSEzkJwRg0yELxb@bookscluster-pabzd.mongodb.net/books?retryWrites=true&w=majority
+
 
 mongo = PyMongo(app)
 
