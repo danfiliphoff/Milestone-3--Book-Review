@@ -1,13 +1,9 @@
-<html>
-    <head>
-
-    </head>
-    <body>
+{% extends 'base.html'%}
+{% block content %}
         {% for book in books %}
             {{book.name}}
             {{book.author}}
             {{book.isbn}}
             {{book.review}}
         {% endfor %}
-    </body>
-</html>
+{% endblock %}
