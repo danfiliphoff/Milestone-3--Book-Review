@@ -1,25 +1,19 @@
 {% extends 'base.html'%}
 {% block content %}
-        {% for book in books %}
-            {{book.name}}
-            {{book.author}}
-            {{book.isbn}}
-            {{book.review}}
-        {% endfor %}
-<!---below code copyed from materilized--->
   <ul class="collapsible">
+    {% for book in books %}
     <li>
-      <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            {{book.name}} 
+            {{book.author}}
+        </div>
+        <div class="collapsible-body">
+            <span>
+                {{book.review}}
+                {{book.isbn}}
+            </span>
+        </div>
     </li>
-    <li>
-      <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
+    {% endfor %}
   </ul>
-<!---above code copyed from materilized--->
 {% endblock %}
