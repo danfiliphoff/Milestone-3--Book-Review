@@ -12,23 +12,21 @@
                 <input id="book_author" name="book_author" type="text" class="validate">
                 <label for="book_author">Author</label>
             </div>
+            <!--add dropdown menu for genra-->
             <div class="input-field col s6">
+                <i class="material-icons prefix">arrow_drop_down</i>
+                <input id="book_genra" name="book_genra" type="text" class="validate">
+                <label for="book_genra">Genra</label>
+            </div>
+            <div class="input-field col s6">
+                <input id="book_isbn" name="book_isbn" type="number" class="validate">
+                <label for="book_isbn">ISBN</label>
+            </div>
+            <div class="input-field col s12">
                 <textarea id="book_review" name="book_review" type="textarea" class="materialize-textarea"></textarea>
                 <label for="book_review">Review</label>
             </div>
-            <!--add dropdown menu for genra-->
-            </div>
-                <div class="input-field col s6">
-                    <i class="material-icons prefix">arrow_drop_down</i>
-                    <input id="book_genra" name="book_genra" type="text" class="validate">
-                    <label for="book_genra">Genra</label>
-                </div>
-            </div>
-                <div class="input-field col s6">
-                    <input id="book_isbn" name="book_isbn" type="number" class="validate">
-                    <label for="book_isbn">ISBN</label>
-            </div>
         </div>
     </form>
-  </div>
+</div>
 {% endblock %}
