@@ -17,7 +17,8 @@ def get_books():
 
 @app.route('/add_book')
 def add_book():
-    return render_template("addbook.html")
+    return render_template("addbook.html",
+        genre=mongo.db.genre.find())
 
 
 
