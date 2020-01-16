@@ -15,10 +15,10 @@
             <!--add dropdown menu for genra-->
             <div class="input-field col s6">
                 <select id="genre" name="genre_name">
-                <option value="" disabled selected>Genre</option>
-                {% for gen in genre %}
-                <option value="{{gen.genre_name}}">{{gen.genre_name}}</option>
-                {% endfor %}
+                    <option value="" disabled selected>Genre</option>
+                    {% for gen in genre %}
+                        <option value="{{gen.genre_name}}">{{gen.genre_name}}</option>
+                    {% endfor %}
                 </select>
             </div>
 
