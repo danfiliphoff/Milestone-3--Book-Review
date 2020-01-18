@@ -2,7 +2,7 @@
 <!--gör så att addedar funktion är i en materialize modall-->
 <h3>Add Book</h3>
 <div class="row">
-    <form action="" method="POST" class="col s12">
+    <form action="{{url_for('insert_book')}}" method="POST" class="col s12">
         <div class="row">
             <div class="input-field col s6">
                 <input id="book_title" name="book_title" type="text" class="validate">
