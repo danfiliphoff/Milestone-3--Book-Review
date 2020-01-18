@@ -22,6 +22,12 @@ def add_book():
     return render_template("addbook.html",
         genre=mongo.db.genre.find())
 
+@app.route('/insert_book', methods=['POST'])
+def insert_book():
+    books = mongo.db.books
+    books.insert_one(request.form.to_dict())
+    return redirect(url_for('add_book'))
+
 
 
 if __name__ == '__main__':

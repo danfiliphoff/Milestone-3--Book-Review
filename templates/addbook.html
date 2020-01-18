@@ -21,10 +21,12 @@
                     {% endfor %}
                 </select>
             </div>
+            <!--validera att ISBN är endast siffror och att det är 10 ELLER 13 siffror långt -->
             <div class="input-field col s6">
                 <input id="book_isbn" name="book_isbn" type="number" class="validate">
                 <label for="book_isbn">ISBN</label>
             </div>
+            <!--validera att reviewin inte är under 200 ord-->
             <div class="input-field col s12">
                 <textarea id="book_review" name="book_review" type="textarea" class="materialize-textarea"></textarea>
                 <label for="book_review">Review</label>
