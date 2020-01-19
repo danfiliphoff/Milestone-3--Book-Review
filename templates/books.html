@@ -6,7 +6,9 @@
   <ul class="collapsible">
     {% for book in books %}
     <li>
-        <div class="collapsible-header"><i class="material-icons">expand_more</i>
+        <div class="collapsible-header">
+            <i class="material-icons">expand_more</i>
+            <a class="waves-effect waves-light btn-small">Eddit</a>
             {{book.name}} 
             {{book.author}}
             {{book.genre_name}}
