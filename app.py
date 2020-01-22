@@ -28,7 +28,7 @@ def insert_book():
     books.insert_one(request.form.to_dict())
     return redirect(url_for('add_book'))
 
-@app.route('/edit_book/<book_id>')
+@app.route('/edit_book/<books_id>')
 def book_task(book_id):
     the_book =  mongo.db.books.find_one({"_id": ObjectId(books_id)})
     all_genre =  mongo.db.genre.find()
