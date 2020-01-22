@@ -29,7 +29,7 @@ def insert_book():
     return redirect(url_for('add_book'))
 
 @app.route('/edit_book/<book_id>')
-def book_task(book_id):
+def edit_book(book_id):
     the_book =  mongo.db.books.find_one({"_id": ObjectId(book_id)})
     all_genre =  mongo.db.genre.find()
     return render_template('editbook.html', book=the_book,
