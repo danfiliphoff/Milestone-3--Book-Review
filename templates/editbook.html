@@ -1,0 +1,42 @@
+{% extends 'base.html'%} {% block content %}
+<!--gör så att addedar funktion är i en materialize modall-->
+<h3>Edit Book</h3>
+<div class="row">
+    <form action="{{url_for('insert_book')}}" method="POST" class="col s12">
+        <div class="row">
+            <div class="input-field col s6">
+                <input id="name" name="name" type="text" class="validate">
+                <label for="name">Title</label>
+            </div>
+            <div class="input-field col s6">
+                <input id="author" name="author" type="text" class="validate">
+                <label for="author">Author</label>
+            </div>
+            <!--validera att något fält är valt-->
+            <div class="input-field col s6">
+                <select id="genre" name="genre_name">
+                    <option value="" disabled selected>Genre</option>
+                    {% for gen in genre %}
+                        <option value="{{gen.genre_name}}">{{gen.genre_name}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <!--validera att ISBN är endast siffror och att det är 10 ELLER 13 siffror långt -->
+            <div class="input-field col s6">
+                <input id="isbn" name="isbn" type="number" class="validate">
+                <label for="isbn">ISBN</label>
+            </div>
+            <!--validera att reviewin inte är under 200 ord-->
+            <div class="input-field col s12">
+                <textarea id="review" name="review" type="textarea" class="materialize-textarea"></textarea>
+                <label for="review">Review</label>
+            </div>
+            <div>
+                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}
