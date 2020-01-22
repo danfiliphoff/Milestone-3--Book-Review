@@ -30,7 +30,7 @@ def insert_book():
 
 @app.route('/edit_book/<book_id>')
 def book_task(book_id):
-    the_book =  mongo.db.books.find_one({"_id": ObjectId(book_id)})
+    the_book =  mongo.db.books.find_one({"_id": ObjectId(books_id)})
     all_genre =  mongo.db.genre.find()
     return render_template('editbook.html', book=the_book,
                            genre=all_genre)
