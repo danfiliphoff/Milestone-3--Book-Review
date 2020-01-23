@@ -5,11 +5,11 @@
     <form action="{{url_for('insert_book')}}" method="POST" class="col s12">
         <div class="row">
             <div class="input-field col s6">
-                <input id="name" name="name" type="text" class="validate" value="{{book.book_title}}">
+                <input id="name" name="name" type="text" class="validate" value="{{books.book_title}}">
                 <label for="name">Title</label>
             </div>
             <div class="input-field col s6">
-                <input id="author" name="author" type="text" class="validate" value="{{book.book_author}}">
+                <input id="author" name="author" type="text" class="validate" value="{{books.book_author}}">
                 <label for="author">Author</label>
             </div>
             <!--validera att något fält är valt-->
@@ -27,12 +27,12 @@
             </div>
             <!--validera att ISBN är endast siffror och att det är 10 ELLER 13 siffror långt -->
             <div class="input-field col s6">
-                <input id="isbn" name="isbn" type="number" class="validate" value="{{book.book_isbn}}">
+                <input id="isbn" name="isbn" type="number" class="validate" value="{{books.book_isbn}}">
                 <label for="isbn">ISBN</label>
             </div>
             <!--validera att reviewin inte är under 200 ord-->
             <div class="input-field col s12">
-                <textarea id="review" name="review" type="textarea" class="materialize-textarea">{{book.book_review}}</textarea>
+                <textarea id="review" name="review" type="textarea" class="materialize-textarea">{{books.book_review}}</textarea>
                 <label for="review">Review</label>
             </div>
             <div>
