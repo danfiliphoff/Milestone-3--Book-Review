@@ -35,6 +35,19 @@ def edit_book(book_id):
     return render_template('editbook.html', book=the_book,
                            genre=all_genre)
 
+@app.route('/update_book/book_id>', methods=["POST"])
+def update_book(book_id):
+    book = mongo.db.books
+    book.update( {'_id': ObjectId(book_id)},
+    {
+        'name':request.form.get('name'),
+        'author':request.form.get('author'),
+        'genre_name':request.form.get('genre_name'),
+        'isbn':request.form.get('isbn'),
+        'review':request.form.get('review')
+    })
+    return redirect(url_for('get_books'))
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
