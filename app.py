@@ -35,7 +35,7 @@ def edit_book(book_id):
     return render_template('editbook.html', book=the_book,
                            genre=all_genre)
 
-@app.route('/update_book/book_id>', methods=["POST"])
+@app.route('/update_book/<book_id>', methods=["POST"])
 def update_book(book_id):
     book = mongo.db.books
     book.update( {'_id': ObjectId(book_id)},
