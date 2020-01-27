@@ -6,6 +6,28 @@
         <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
     </head>
     <body>
+        <header>
+            <div class="navbar-fixed">
+                <nav>
+                    <div class="nav-wrapper">
+                        <a href="#!" class="brand-logo">Logo</a>
+                        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                        <ul class="right hide-on-med-and-down">
+                            <li><a href="sass.html">Sass</a></li>
+                            <li><a href="badges.html">Components</a></li>
+                            <li><a href="collapsible.html">Javascript</a></li>
+                            <li><a href="mobile.html">Mobile</a></li>
+                        </ul>
+                        <ul class="sidenav" id="mobile-demo">
+                            <li><a href="sass.html">Sass</a></li>
+                            <li><a href="badges.html">Components</a></li>
+                            <li><a href="collapsible.html">Javascript</a></li>
+                            <li><a href="mobile.html">Mobile</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
         {% block content %} {% endblock %}
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -14,6 +36,7 @@
                 $(document).ready(function(){
                     $('.collapsible').collapsible();
                     $('select').material_select();
+                    $('.sidenav-trigger').sidenav();
                 });
         </script>
     </body>
