@@ -15,7 +15,8 @@
             <span>
                 {{book.review}}
                 {{book.isbn}}
-                {{book.book_link}}
+                <!--förösk att lägga till länk-->
+                <a href="{{url_for({{book.book_link}})}}">{{book.book_link}}</a>
             </span>
         </div>
     </li>
