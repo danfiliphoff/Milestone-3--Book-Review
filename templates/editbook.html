@@ -30,6 +30,11 @@
                 <input id="isbn" name="isbn" type="number" class="validate" value="{{book.isbn}}">
                 <label for="isbn">ISBN</label>
             </div>
+            <!--validera att det är en länk -->
+            <div class="input-field col s12">
+                <input id="book_link" name="book_link" type="link" class="validate" value="{{book.book_link}}">
+                <label for="book_link">Link</label>
+            </div>
             <!--validera att reviewin inte är under 200 ord-->
             <div class="input-field col s12">
                 <textarea id="review" name="review" type="textarea" class="materialize-textarea">{{book.review}}</textarea>
