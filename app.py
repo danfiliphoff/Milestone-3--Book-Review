@@ -8,8 +8,8 @@ from os import path
 
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'books'
-#förösk spara danhoff:UrSEzkJwRg0yELxb i environmental variabel så att lösenord ej syns på gith
-app.config["MONGO_URI"] = os.environ.get('mongodb_name') 
+#
+app.config["MONGO_URI"] = os.getenv('mongodb_name') 
 
 mongo = PyMongo(app)
 
