@@ -2,11 +2,14 @@ import os
 from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from os import path 
+    if path.exists("env.py"):
+    import env
 
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'books'
 #förösk spara danhoff:UrSEzkJwRg0yELxb i environmental variabel så att lösenord ej syns på gith
-app.config["MONGO_URI"] = 'mongodb+srv://danhoff:UrSEzkJwRg0yELxb@bookscluster-pabzd.mongodb.net/books?retryWrites=true&w=majority'
+app.config["MONGO_URI"] = os.environ.get('mongodb_name') 
 
 mongo = PyMongo(app)
 
