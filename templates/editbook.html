@@ -14,7 +14,7 @@
             </div>
             <!--validera att något fält är valt-->
             <div class="input-field col s6">
-                <select id="genre" name="genre_name" required>
+                <select id="genre" name="genre_name">
                     <option value="" disabled selected>Genre</option>
                     {% for gen in genre %}
                         {% if gen.genre_name == book.genre_name %}
@@ -27,7 +27,7 @@
             </div>
             <!--validera att ISBN är endast siffror och att det är 10 ELLER 13 siffror långt -->
             <div class="input-field col s6">
-                <input id="isbn" name="isbn" type="number" class="validate" value="{{book.isbn}}" required>
+                <input id="isbn" name="isbn" type="number" class="validate" value="{{book.isbn}}" min=9780000000000 max=9799999999999 required>
                 <label for="isbn">ISBN</label>
             </div>
             <!--validera att det är en länk -->
@@ -37,7 +37,7 @@
             </div>
             <!--validera att reviewin inte är under 200 ord-->
             <div class="input-field col s12">
-                <textarea id="review" name="review" type="textarea" class="materialize-textarea" data-length="200" required>{{book.review}}</textarea>
+                <textarea id="review" name="review" type="textarea" class="materialize-textarea" minlength="200" required>{{book.review}}</textarea>
                 <label for="review">Review</label>
                 <span class="helper-text" data-error="wrong" data-success="right">Minimum 200 words</span>
             </div>
