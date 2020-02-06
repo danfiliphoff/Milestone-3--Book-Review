@@ -5,16 +5,16 @@
     <form action="{{url_for('update_book', book_id=book._id)}}" method="POST" class="col s12">
         <div class="row">
             <div class="input-field col s6">
-                <input id="name" name="name" type="text" class="validate" value="{{book.name}}">
+                <input id="name" name="name" type="text" class="validate" value="{{book.name}}" required>
                 <label for="name">Title</label>
             </div>
             <div class="input-field col s6">
-                <input id="author" name="author" type="text" class="validate" value="{{book.author}}">
+                <input id="author" name="author" type="text" class="validate" value="{{book.author}}" required>
                 <label for="author">Author</label>
             </div>
             <!--validera att något fält är valt-->
             <div class="input-field col s6">
-                <select id="genre" name="genre_name">
+                <select id="genre" name="genre_name" required>
                     <option value="" disabled selected>Genre</option>
                     {% for gen in genre %}
                         {% if gen.genre_name == book.genre_name %}
@@ -27,17 +27,17 @@
             </div>
             <!--validera att ISBN är endast siffror och att det är 10 ELLER 13 siffror långt -->
             <div class="input-field col s6">
-                <input id="isbn" name="isbn" type="number" class="validate" value="{{book.isbn}}">
+                <input id="isbn" name="isbn" type="number" class="validate" value="{{book.isbn}}" required>
                 <label for="isbn">ISBN</label>
             </div>
             <!--validera att det är en länk -->
             <div class="input-field col s12">
-                <input id="book_link" name="book_link" type="url" class="validate" value="{{book.book_link}}">
+                <input id="book_link" name="book_link" type="url" class="validate" value="{{book.book_link}}" required>
                 <label for="book_link">Link</label>
             </div>
             <!--validera att reviewin inte är under 200 ord-->
             <div class="input-field col s12">
-                <textarea id="review" name="review" type="textarea" class="materialize-textarea" data-length="200">{{book.review}}</textarea>
+                <textarea id="review" name="review" type="textarea" class="materialize-textarea" data-length="200" required>{{book.review}}</textarea>
                 <label for="review">Review</label>
                 <span class="helper-text" data-error="wrong" data-success="right">Minimum 200 words</span>
             </div>
