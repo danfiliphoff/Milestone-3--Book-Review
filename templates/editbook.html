@@ -28,7 +28,7 @@
             <!--validera att ISBN är endast siffror och att det är 10 ELLER 13 siffror långt -->
             <div class="input-field col s6">
                 <input id="isbn" name="isbn" type="number" class="validate" value="{{book.isbn}}" min=9780000000000 max=9799999999999 required>
-                <label for="isbn">ISBN</label>
+                <label for="isbn">ISBN - 13 digits</label>
             </div>
             <!--validera att det är en länk -->
             <div class="input-field col s12">
@@ -39,7 +39,7 @@
             <div class="input-field col s12">
                 <textarea id="review" name="review" type="textarea" class="materialize-textarea" minlength="200" required>{{book.review}}</textarea>
                 <label for="review">Review</label>
-                <span class="helper-text" data-error="wrong" data-success="right">Minimum 200 words</span>
+                <span class="helper-text" data-error="wrong" data-success="right">Minimum 200 letters</span>
             </div>
             <div>
                 <button class="btn waves-effect waves-light" type="submit" name="action">Submit
