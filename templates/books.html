@@ -2,6 +2,21 @@
 {% block content %}
   <ul class="collapsible">
     {% for book in books %}
+    <div class="row">
+        <div class="col s12 m6">
+            <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title">{{book.name}}</span>
+                    <span class="card-title">{{book.author}}</span>
+                    <span class="card-title">{{book.genre_name}}</span>
+                </div>
+                <div class="card-action">
+                    <a href="#">This is a link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <li>
         <div class="collapsible-header">
             <i class="material-icons">expand_more</i>
