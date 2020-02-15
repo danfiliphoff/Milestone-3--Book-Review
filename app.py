@@ -7,7 +7,6 @@ app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'books'
 #
 app.config["MONGO_URI"] = os.environ.get('mongodb_name') 
-
 mongo = PyMongo(app)
 
 @app.route('/')
@@ -51,6 +50,22 @@ def update_book(book_id):
 def delete_book(book_id):
     mongo.db.books.remove({'_id': ObjectId(book_id)})
     return redirect(url_for('get_books'))
+
+#below code to count votes
+@app.route('/upvote_book/<book_id>')
+def upvote_book(book_id):
+    #add 1 to count value in mongodb. so add a number to the database
+        # return current value for "votes" in mongodb. I have added votes to collection.
+        def votes=mongo.db.books.findOne({'_id': ObjectId(book_id)}, {'votes'}); 
+        # add one to "votes"
+        def newvotes= votes + float(1)
+        def votes = newvotes 
+        # submit new total value of "votes" to mongo db 
+
+
+@app.route('/downvote_book/<book_id>')
+def downvote_book(book_id):
+    #subtrakt 1 to count value in mongodb. so subtract number from the database
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
