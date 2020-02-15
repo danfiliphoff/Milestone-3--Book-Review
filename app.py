@@ -15,8 +15,6 @@ mongo = PyMongo(app)
 def get_books():
     return render_template("books.html", books=mongo.db.books.find())
 
-
-#nedan kod binder databasen till genra så att det i addbook.py går att gå igenom
 @app.route('/add_book')
 def add_book():
     return render_template("addbook.html",
