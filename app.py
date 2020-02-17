@@ -58,7 +58,7 @@ def upvote_book(book_id):
         # return current value for "votes" in mongodb. I have added votes to collection.
         votes = mongo.db.books.find_one({'_id': ObjectId(book_id)}, {'votes'}); 
         # add one to "votes"
-        newvotes= votes + float(1)
+        newvotes= votes + 1
         votes = newvotes 
         # submit new total value of "votes" to mongo db 
         book.update( {'_id': ObjectId(book_id)},
