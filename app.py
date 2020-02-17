@@ -67,11 +67,6 @@ def upvote_book(book_id):
          })
         
 
-
-#@app.route('/downvote_book/<book_id>')
-#def downvote_book(book_id):
-    #subtrakt 1 to count value in mongodb. so subtract number from the database
-
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
