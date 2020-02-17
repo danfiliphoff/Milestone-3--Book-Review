@@ -56,10 +56,10 @@ def delete_book(book_id):
 def upvote_book(book_id):
     #add 1 to count value in mongodb. so add a number to the database
         # return current value for "votes" in mongodb. I have added votes to collection.
-        def votes=mongo.db.books.findOne({'_id': ObjectId(book_id)}, {'votes'}); 
+        votes = mongo.db.books.findOne({'_id': ObjectId(book_id)}, {'votes'}); 
         # add one to "votes"
-        def newvotes= votes + float(1)
-        def votes = newvotes 
+        newvotes= votes + float(1)
+        votes = newvotes 
         # submit new total value of "votes" to mongo db 
         book.update( {'_id': ObjectId(book_id)},
         {
