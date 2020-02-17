@@ -61,10 +61,15 @@ def upvote_book(book_id):
         def newvotes= votes + float(1)
         def votes = newvotes 
         # submit new total value of "votes" to mongo db 
+        book.update( {'_id': ObjectId(book_id)},
+        {
+            'votes':request.form.get('votes'),
+         })
+        
 
 
-@app.route('/downvote_book/<book_id>')
-def downvote_book(book_id):
+#@app.route('/downvote_book/<book_id>')
+#def downvote_book(book_id):
     #subtrakt 1 to count value in mongodb. so subtract number from the database
 
 if __name__ == '__main__':
