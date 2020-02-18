@@ -54,17 +54,17 @@ def delete_book(book_id):
 #below code to count votes
 @app.route('/upvote_book/<book_id>')
 def upvote_book(book_id):
-        book = mongo.db.books
+    book = mongo.db.books
     #add 1 to count value in mongodb. so add a number to the database
         # return current value for "votes" in mongodb. I have added votes to collection.
-        votes = book.find_one({'_id': ObjectId(book_id)}, {'votes'}); 
-        # add one to "votes"
-        votes = book('votes') + 1 
+    votes = book.find_one({'_id': ObjectId(book_id)}, {'votes'})
+           # add one to "votes"
+    votes = book('votes') + 1 
         # submit new total value of "votes" to mongo db 
-        book.update( {'_id': ObjectId(book_id)},
-        {
-            'votes':request.form.get('votes'),
-         })
+    book.update( {'_id': ObjectId(book_id)},
+    {
+        'votes':request.form.get(votes),
+    })
         
 
 if __name__ == '__main__':
