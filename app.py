@@ -63,6 +63,7 @@ def upvote_book(book_id):
     book.update({
         'votes':request.form.get('votes'),
     })
+    return render_template("books.html")
         
 
 if __name__ == '__main__':
