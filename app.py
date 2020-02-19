@@ -60,8 +60,7 @@ def upvote_book(book_id):
            # add one to "votes"
     votes = book['votes'] + 1 
         # submit new total value of "votes" to mongo db 
-    book.update( {'_id': ObjectId(book_id)},
-    {
+    book.update({
         'votes':request.form.get('votes'),
     })
         
