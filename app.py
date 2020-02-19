@@ -35,7 +35,7 @@ def edit_book(book_id):
 @app.route('/update_book/<book_id>', methods=["POST"])
 def update_book(book_id):
     book = mongo.db.books
-    book.update( {'_id': ObjectId(book_id)},
+    book.update({'_id': ObjectId(book_id)},
     {
         'name':request.form.get('name'),
         'author':request.form.get('author'),
