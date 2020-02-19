@@ -63,7 +63,7 @@ def upvote_book(book_id):
     book.update({
         'votes':request.form.get('votes'),
     })
-    return render_template("books.html")
+    return render_template("books.html", books=mongo.db.books.find())
         
 
 if __name__ == '__main__':
