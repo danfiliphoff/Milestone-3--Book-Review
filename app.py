@@ -58,6 +58,7 @@ def delete_book(book_id):
 @app.route('/upvote_book/<book_id>')
 def upvote_book(book_id):
     book = mongo.db.books.find_one({'_id': ObjectId(book_id)})
+    print(f'original: {book}')
     votes = book['votes'] + 1
     print(votes)
     # submit new total value of "votes" t mongo db 
@@ -65,6 +66,7 @@ def upvote_book(book_id):
         'votes': votes,
     })
     book = mongo.db.books.find_one({'_id': ObjectId(book_id)})
+    print(f'modified: {book}')
     return render_template("books.html", books=mongo.db.books.find())
         
 
