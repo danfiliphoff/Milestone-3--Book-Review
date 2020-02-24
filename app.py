@@ -2,6 +2,8 @@ import os
 from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from pymongo import MongoClient
+client = MongoClient()
 
 if os.path.exists("env.py"):
     import env
@@ -62,7 +64,7 @@ def upvote_book(book_id):
     # submit new total value of "votes" t mongo db 
     mongo.db.books.update(
         {"_id": book_id},
-        {$set: {"votes": votes}}
+        {"$set": {"votes": votes}}
     )
     return render_template("books.html", books=mongo.db.books.find())
         
