@@ -62,7 +62,7 @@ def upvote_book(book_id):
     # submit new total value of "votes" t mongo db 
     book.update(
         {_id: book_id},
-        { $set:
+        {$set:
             {
                 votes: votes
             }
