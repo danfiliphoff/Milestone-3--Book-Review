@@ -62,10 +62,8 @@ def upvote_book(book_id):
     # submit new total value of "votes" t mongo db 
     mongo.db.books.update(
         {"_id": book_id},
-        {"$set": {"votes": votes}}
+        {$set: {"votes": votes}}
     )
-    book = mongo.db.books.find_one({'_id': ObjectId(book_id)})
-    print(f'modified: {book}')
     return render_template("books.html", books=mongo.db.books.find())
         
 
