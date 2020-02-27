@@ -59,7 +59,7 @@ def upvote_book(book_id):
         {"_id": ObjectId(book_id)},
         {'$inc': {'votes': 1}},
     upsert=False)
-    return render_template("books.html", books=mongo.db.books.find())   
+    return render_template("books.html", books=mongo.db.books.find().sort("votes", -1))   
 
 @app.route('/downvote_book/<book_id>')
 def downvote_book(book_id):
@@ -67,7 +67,7 @@ def downvote_book(book_id):
         {"_id": ObjectId(book_id)},
         {'$inc': {'votes': -1}},
     upsert=False)
-    return render_template("books.html", books=mongo.db.books.find())
+    return render_template("books.html", books=mongo.db.books.find().sort("votes", -1))
 
 
 if __name__ == '__main__':
