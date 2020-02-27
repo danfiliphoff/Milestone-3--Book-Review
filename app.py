@@ -56,12 +56,12 @@ def delete_book(book_id):
     return redirect(url_for('get_books'))
 
 #below code to count votes
-@app.route('/upvote_book/<book_id>', methods=["POST"])
+@app.route('/upvote_book/<book_id>')
 def upvote_book(book_id):
-    book = mongo.db.books.find_one({'_id': ObjectId(book_id)})
+    book = mongo.db.books.update_one({'_id': ObjectId(book_id)})
     votes = book['votes'] + 1
     # submit new total value of "votes" t mongo db 
-    mongo.db.books.update(
+    mongo.db.books.update_one(
         {"_id": book_id},
         {"$set": {"votes": votes}},
     upsert=False)
