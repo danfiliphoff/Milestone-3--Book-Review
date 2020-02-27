@@ -2,8 +2,6 @@ import os
 from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
-
-
 if os.path.exists("env.py"):
     import env
 
@@ -16,7 +14,7 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/get_books')
 def get_books():
-    return render_template("books.html", books=mongo.db.books.find())
+    return render_template("books.html", books=mongo.db.books.find().sort({"votes": 1}))
 
 @app.route('/add_book')
 def add_book():
