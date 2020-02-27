@@ -14,7 +14,7 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/get_books')
 def get_books():
-    return render_template("books.html", books=mongo.db.books.find().sort({"votes": 1}))
+    return render_template("books.html", books=mongo.db.books.find().sort({"votes", 1}))
 
 @app.route('/add_book')
 def add_book():
