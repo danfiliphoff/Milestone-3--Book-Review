@@ -63,6 +63,15 @@ def upvote_book(book_id):
     upsert=False)
     return render_template("books.html", books=mongo.db.books.find())   
 
+@app.route('/downvote_book/<book_id>')
+def downvote_book(book_id):
+    mongo.db.books.update_one(
+        {"_id": ObjectId(book_id)},
+        {'$inc': {'votes': -1}},
+    upsert=False)
+    return render_template("books.html", books=mongo.db.books.find())
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT', 3000)),
