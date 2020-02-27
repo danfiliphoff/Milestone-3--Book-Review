@@ -58,14 +58,18 @@ def delete_book(book_id):
 #below code to count votes
 @app.route('/upvote_book/<book_id>')
 def upvote_book(book_id):
-    book = mongo.db.books.find_one({'_id': ObjectId(book_id)})
-    votes = book['votes'] + 1
-    # submit new total value of "votes" t mongo db 
-    mongo.db.book.update_one(
-        {"_id": book_id},
-        {"$set": {"votes": votes+1}},
-    upsert=False)
-    return render_template("books.html", books=mongo.db.books.find())
+    db.books.update_one({
+        '_id': book_id},
+        {'$inc': {'votes': 1}},
+         upsert=False)
+    
+    #book = mongo.db.books.find_one({'_id': ObjectId(book_id)})
+    #votes = book['votes'] + 1
+    #mongo.db.books.update_one(
+        #{"_id": book_id},
+        #{"$set": {"votes": votes+1}},
+    #upsert=False)
+    #return render_template("books.html", books=mongo.db.books.find())
         
 
 if __name__ == '__main__':
