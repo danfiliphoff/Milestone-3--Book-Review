@@ -7,14 +7,14 @@
     </head>
     <body>
     <header>
+        <!-- Dropdown Structure -->
+        <ul id="dropdown1" class="dropdown-content">
+            <li>one</li>
+            <li>two</li>
+            <li class="divider"></li>
+            <li>three</li>
+        </ul>
         <div class="navbar-fixed">
-            <!-- Dropdown Structure -->
-            <ul id="dropdown1" class="dropdown-content">
-                <li><a href="#!">one</a></li>
-                <li><a href="#!">two</a></li>
-                <li class="divider"></li>
-                <li><a href="#!">three</a></li>
-            </ul>
             <nav>
                 <div class="nav-wrapper">
                     <a href="{{url_for('get_books')}}" class="brand-logo">Books</a>
@@ -43,7 +43,7 @@
                     $(".button-collapse").sideNav();
                     $('input#input_text, textarea#textarea2').characterCounter();
                     $('.modal').modal();
-                    $(".dropdown-trigger").dropdown({ hover: false });
+                    $(".dropdown-trigger").dropdown();
                 });
         </script>
     </body>
