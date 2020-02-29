@@ -8,14 +8,14 @@
     <body>
     <header>
         <div class="navbar-fixed">
-            <nav>
-                <!-- Dropdown Structure -->
+            <!-- Dropdown Structure -->
                 <ul id="dropdown1" class="dropdown-content">
                     <li>one</li>
                     <li>two</li>
                     <li class="divider"></li>
                     <li>three</li>
                 </ul>
+            <nav>
                 <div class="nav-wrapper">
                     <a href="{{url_for('get_books')}}" class="brand-logo">Books</a>
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -37,6 +37,7 @@
         {% block content %} {% endblock %}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script type="text/javascript">
                 $(document).ready(function(){
                     $('.collapsible').collapsible();
