@@ -21,7 +21,7 @@
                     <ul class="right hide-on-med-and-down">
                         <li><a href="{{url_for('get_books')}}">Home</a></li>
                         <li><a href="{{url_for('add_book')}}">Add Book</a></li>
-                        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+                        <li><a class="dropdown-trigger" href="#" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
                     </ul>
                 </div>
             </nav>
@@ -54,12 +54,11 @@
         {% block content %} {% endblock %}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script type="text/javascript">
                 $(document).ready(function(){
                     $('.collapsible').collapsible();
-                    $('select').material_select();
-                    $(".button-collapse").sideNav();
+                    $('select').formSelect();
+                    $(".button-collapse").sidenav();
                     $('input#input_text, textarea#textarea2').characterCounter();
                     $('.modal').modal();
                     $(".dropdown-trigger").dropdown();
