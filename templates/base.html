@@ -8,13 +8,6 @@
     <body>
     <header>
         <div class="navbar-fixed">          
-            <!-- Dropdown Structure 
-            <ul id="dropdown1" class="dropdown-content">
-                <li><a href="#!">one</a></li>
-                <li><a href="#!">two</a></li>
-                <li class="divider"></li>
-                <li><a href="#!">three</a></li>
-            </ul>-->
             <nav>
                 <div class="nav-wrapper">
                     <a href="{{url_for('get_books')}}" class="brand-logo">Books</a>
@@ -28,10 +21,10 @@
         </div>
         <!--  Dropdown Structure  -->
         <ul id="dropdown1" class="dropdown-content">
-            <li><a href="#!">one</a></li>
-            <li><a href="#!">two</a></li>
-            <li class="divider"></li>
-            <li><a href="#!">three</a></li>
+            {% for gen in genre %}
+                <li><a href=genre.html>{{gen.genre_name}}</a></li>
+                <li class="divider"></li>
+            {% endfor %}
         </ul> 
            <!--   <nav>
                 <div class="nav-wrapper">
