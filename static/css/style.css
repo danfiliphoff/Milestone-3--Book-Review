@@ -2,3 +2,6 @@ body{
     background-color: red;
 }
 
+.genre-choice-width{
+    max-width: 210px;
+}
