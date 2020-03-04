@@ -21,12 +21,10 @@ def add_book():
     return render_template("addbook.html",
         genre=mongo.db.genre.find())
 
-#return what?
-@app.route('/dropdown_genre')
-def dropdown_genre():
+@app.route('/genres')
+def genres():
     return render_template("genre.html",
         genre=mongo.db.genre.find())
-
 
 @app.route('/insert_book', methods=['POST'])
 def insert_book():
