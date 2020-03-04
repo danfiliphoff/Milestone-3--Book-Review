@@ -14,20 +14,11 @@
                     <ul class="right hide-on-med-and-down">
                         <li><a href="{{url_for('get_books')}}">Home</a></li>
                         <li><a href="{{url_for('add_book')}}">Add Book</a></li>
-                        <li><a href="{{url_for('dropdown_genre')}}" class="dropdown-trigger"  data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+                        <li><a href="genre.html">Genres</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
-        <!--dropdown structure-->
-        <ul id="dropdown1" class="dropdown-content">
-            {% for gen in genre %}
-            <li><a href="genre.html" id="{{gen.genre_name}}">{{gen.genre_name}}</a></li>
-            <li class="divider"></li>
-            {% endfor %}
-        </ul>
-
-
         <!--  Dropdown Structure  
         <ul id="dropdown1" class="dropdown-content">
             <li><a href="#!" id="Children and Teenagers">Children and Teenagers</a></li>
