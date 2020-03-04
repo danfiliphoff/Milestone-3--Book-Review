@@ -24,7 +24,7 @@ def add_book():
 #return what?
 @app.route('/dropdown_genre')
 def dropdown_genre():
-    return (
+    return render_template("genre.html",
         genre=mongo.db.genre.find())
 
 
