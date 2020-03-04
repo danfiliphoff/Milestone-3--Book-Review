@@ -19,7 +19,7 @@ def get_books():
 @app.route('/add_book')
 def add_book():
     return render_template("addbook.html",
-        genre=mongo.db.genre.find())
+        genre=mongo.db.genre.find().sort("genre_name"))
 
 @app.route('/genres')
 def genres():
@@ -35,7 +35,7 @@ def insert_book():
 @app.route('/edit_book/<book_id>')
 def edit_book(book_id):
     the_book =  mongo.db.books.find_one({"_id": ObjectId(book_id)})
-    all_genre =  mongo.db.genre.find()
+    all_genre =  mongo.db.genre.find().sort("genre_name")
     return render_template('editbook.html', book=the_book,
                            genre=all_genre)
 
