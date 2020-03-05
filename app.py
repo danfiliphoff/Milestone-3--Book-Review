@@ -27,6 +27,12 @@ def genres():
     genre = mongo.db.genre.find().sort("genre_name")
     return render_template("genre.html", books= books, genre = genre)
 
+@app.route('/selected_genre')
+def genres(genre_name):
+    books = mongo.db.books.find({"genre_name": genre_name}).sort("votes", -1)
+    genre = mongo.db.genre.find().sort("genre_name")
+    return render_template("genre.html", books= books, genre = genre)
+
 @app.route('/insert_book', methods=['POST'])
 def insert_book():
     books = mongo.db.books
