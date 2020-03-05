@@ -26,13 +26,6 @@ def genres():
     return render_template("genre.html",
         genre=mongo.db.genre.find().sort("genre_name"))
 
-#on selecting a genre
-#@app.route('/selected_genre')
-#argumente ska baseras på vad man har klickat på
-#def selected_genre(genre_name):
-    #return render_template("genre.html", genre=mongo.db.books.find({"genre_name": ObjectId(book_id)}).sort("votes", -1))
-
-
 @app.route('/insert_book', methods=['POST'])
 def insert_book():
     books = mongo.db.books
