@@ -3,34 +3,7 @@
       <ul class="collection with-header">
         <li class="collection-header"><h4>Genres</h4></li>
         {% for gen in genre %}
-            <li><a href="#!" class="collection-item" id="{{gen.genre_name}}">{{gen.genre_name}}</a></li>
+            <li><a href="{{url_for('selected_genre')}}" class="collection-item" id="{{gen.genre_name}}">{{gen.genre_name}}</a></li>
         {% endfor %}
-
-
-        
-        <!--
-        <li><a href="#!" class="collection-item" id="Children and Teenagers">Children and Teenagers</a></li>
-        <li><a href="#!" class="collection-item" id="Autobiography">Autobiography</a></li>
-        <li><a href="#!" class="collection-item" id="Data and IT">Data and IT</a></li>
-        <li><a href="#!" class="collection-item" id="Detective Novels">Detective Novels</a></li>
-        <li><a href="#!" class="collection-item" id="Animals and Nature">Animals and Nature</a></li>
-        <li><a href="#!" class="collection-item" id="Economics">Economics</a></li>
-        <li><a href="#!" class="collection-item" id="Leadership">Leadership</a></li>
-        <li><a href="#!" class="collection-item" id="Family">Family</a></li>
-        <li><a href="#!" class="collection-item" id="Health">Health</a></li>
-        <li><a href="#!" class="collection-item" id="Film, Radio and TV">Film, Radio and TV</a></li>
-        <li><a href="#!" class="collection-item" id="Philosophy and Religon">Philosophy and Religon</a></li>
-        <li><a href="#!" class="collection-item" id="Homes and Gardens">Homes and Gardens</a></li>
-        <li><a href="#!" class="collection-item" id="History"">History"</a></li>
-        <li><a href="#!" class="collection-item" id="Law">Law</a></li>
-        <li><a href="#!" class="collection-item" id="Culture">Culture</a></li>
-        <li><a href="#!" class="collection-item" id="Food, Wine and Drinks">Food, Wine and Drinks</a></li>
-        <li><a href="#!" class="collection-item" id="Science">Science</a></li>
-        <li><a href="#!" class="collection-item" id="Travel">Travel</a></li>
-        <li><a href="#!" class="collection-item" id="Politics">Politics</a></li>
-        <li><a href="#!" class="collection-item" id="Sports">Sports</a></li>
-        <li><a href="#!" class="collection-item" id="Comics">Comics</a></li>
-        <li><a href="#!" class="collection-item" id="Lifestyle">Lifestyle</a></li>
-        -->
       </ul>
 {% endblock %}
