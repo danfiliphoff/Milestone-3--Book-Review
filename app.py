@@ -29,7 +29,7 @@ def genres():
 #on selecting a genre
 ##@app.route('/selected_genre')
 #argumente ska baseras på vad man har klickat på
-d#ef selected_genre(genre_name):
+#def selected_genre(genre_name):
     #return render_template("genre.html", books=mongo.db.books.find().sort("votes", -1))
 
 
