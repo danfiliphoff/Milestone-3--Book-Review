@@ -27,6 +27,8 @@ def genres():
     genre = mongo.db.genre.find().sort("genre_name")
     return render_template("genre.html", books= books, genre = genre)
 
+#problem: vill generera genre.html men med bara med rätt genre. men kan bara använda genre.html i en funktion inte i två.
+#hur löser jag?
 @app.route('/selected_genre')
 def genres(genre_name):
     books = mongo.db.books.find({"genre_name": genre_name}).sort("votes", -1)
