@@ -28,7 +28,7 @@ def genres():
     return render_template("genre.html", books= books, genre = genre)
 
 @app.route('/selected_genre/<genre_name>')
-def selected_genres(genre_name):
+def selected_genre(genre_name):
     books = mongo.db.books.find({"genre_name": genre_name}).sort("votes", -1)
     genre = mongo.db.genre.find().sort("genre_name")
     return render_template("genre.html", books= books, genre = genre)
