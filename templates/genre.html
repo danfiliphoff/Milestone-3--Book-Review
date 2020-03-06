@@ -3,7 +3,7 @@
     <ul class="collection with-header">
         <li class="collection-header"><h4>Genres</h4></li>
         {% for gen in genre %}
-        <li><a href="{{url_for('selected_genre', genre_name=book.{{gen.genre_name}})}}" class="collection-item" id="{{gen.genre_name}}">{{gen.genre_name}}</a></li>
+        <li><a href="{{url_for('selected_genre', genre_name={{gen.genre_name}} )}}" class="collection-item" id="{{gen.genre_name}}">{{gen.genre_name}}</a></li>
         {% endfor %}
     </ul>
 
