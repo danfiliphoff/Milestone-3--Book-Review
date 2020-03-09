@@ -54,7 +54,6 @@ def update_book(book_id):
         'name':request.form.get('name'),
         'author':request.form.get('author'),
         'genre_name':request.form.get('genre_name'),
-        'isbn':request.form.get('isbn'),
         'review':request.form.get('review'),
         'book_link':request.form.get('book_link')
     })
