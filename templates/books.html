@@ -16,8 +16,8 @@
                 <!--Vote, purchase and eddit buttons-->
                 <div class="card-action">
                     <a href ="{{book.book_link}}" class="waves-effect waves-light btn-small">Buy this book!<i class="material-icons right">shopping_cart</i></a>
-                    <a href="{{url_for('upvote_book', book_id=book._id)}}" id="votes" class="waves-effect waves-light btn-small" type="submit" name="action">Upvote<i lass="material-icons right">thumbs_up</i></a>
-                    <a href="{{url_for('downvote_book', book_id=book._id)}}" id="votes" class="waves-effect waves-light btn-small" type="submit" name="action">Downvote<i class="material-icons right">thumbs_down</i></a>
+                    <a href="{{url_for('upvote_book', book_id=book._id)}}" id="votes" class="waves-effect waves-light btn-small" type="submit" name="action">Upvote<i class="material-icons right">thumb_up</i></a>
+                    <a href="{{url_for('downvote_book', book_id=book._id)}}" id="votes" class="waves-effect waves-light btn-small" type="submit" name="action">Downvote<i class="material-icons right">thumb_down</i></a>
                     <span class="waves-effect waves-light btn-small">{{book.votes}}<i class="material-icons right">thumbs_up_down</i></span>
                     <a href="{{url_for('edit_book', book_id=book._id)}}" class="waves-effect waves-light btn-small">Eddit<i class="material-icons right">edit</i></a>
                     <a href="{{url_for('delete_book', book_id=book._id)}}" class="waves-effect waves-light btn-small">Delete<i class="material-icons right">delete_forever</i></a>
