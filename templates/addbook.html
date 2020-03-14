@@ -28,9 +28,18 @@
                 <span class="helper-text" data-error="wrong" data-success="right">Minimum 200 letters</span>
             </div>
             <div class="send-margin">
-                <button class="btn waves-effect waves-light send-margin" type="submit" name="action">Submit
+                <button class="btn waves-effect waves-light send-margin modal-trigger" data-target="submitted-modal" type="submit" name="action">Submit
                     <i class="material-icons right">send</i>
                 </button>
+                <!-- Modal Structure -->
+                <div id="submitted-modal" class="modal">
+                    <div class="modal-content">
+                    <h3>Thanks for the Review!</h3>
+                    </div>
+                    <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                    </div>
+                </div>
             </div>
         </div>
     </form>
