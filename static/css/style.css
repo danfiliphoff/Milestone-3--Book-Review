@@ -1,7 +1,14 @@
-.body{
-    background-color: black !important;
+/*--------BASE.HTML-------*/
+.general-background {
+    background-image: ("../pictures/background.jpg");
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
 }
 
+/*--------BOOKS.HTML-------*/
+
+/*--------ADDBOOK.html-------*/
 .send-margin{
-    margin-left: 11px !important;
+    margin-left: 6px !important;
 }
