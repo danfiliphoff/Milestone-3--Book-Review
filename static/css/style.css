@@ -1,13 +1,3 @@
-/*--------BASE.HTML-------*/
-.general-background {
-    background-image: ("../pictures/background.jpg");
-    background-repeat: no-repeat;
-    height: 100vh;
-    background-size: cover;
-}
-
-/*--------BOOKS.HTML-------*/
-
 /*--------ADDBOOK.html-------*/
 .send-margin{
     margin-left: 6px !important;
