@@ -22,10 +22,10 @@
                     </div>
                 </nav>
             </div>
-                <ul class="sidenav" id="mobile-nav">
-                    <li><a href="{{url_for('get_books')}}">Home</a></li>
-                    <li><a href="{{url_for('add_book')}}">Add a Book</a></li>
-                    <li><a href="{{url_for('genres')}}">Genres</a></li>
+                <ul class="sidenav #64b5f6 blue lighten-2" id="mobile-nav">
+                    <li><a href="{{url_for('get_books')}}" class="black-text">Home</a></li>
+                    <li><a href="{{url_for('add_book')}}" class="black-text">Add a Book</a></li>
+                    <li><a href="{{url_for('genres')}}" class="black-text">Genres</a></li>
                 </ul>
         </header>
         {% block content %} {% endblock %}
