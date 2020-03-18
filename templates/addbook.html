@@ -28,18 +28,10 @@
                 <span class="helper-text black-text" data-error="wrong" data-success="right">Minimum 200 letters</span>
             </div>
             <div class="send-margin">
-                <button class="btn waves-effect waves-light send-margin modal-trigger black-text" data-target="submitted-modal" type="submit" name="action">Submit
+                <!-- change to a href, take back to books -->
+                <button class="btn waves-effect waves-light send-margin  black-text"  type="submit" name="action">Submit
                     <i class="material-icons right black-text">send</i>
                 </button>
-                <!-- Modal Structure -->
-                <div id="submitted-modal" class="modal">
-                    <div class="modal-content">
-                    <h3 class="black-text center">Thanks for the Review!</h3>
-                    </div>
-                    <div class="modal-footer">
-                    <a href="{{url_for('get_books')}}" class="modal-close waves-effect waves-green btn-flat black-text">Close</a>
-                    </div>
-                </div>
             </div>
         </div>
     </form>
