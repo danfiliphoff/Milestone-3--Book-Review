@@ -4,16 +4,15 @@
         <div class="row">
             <div class="input-field col s6">
                 <input id="name" name="name" type="text" class="validate" required>
-                <label for="name">Title</label>
+                <label for="name" class="black-text">Title</label>
             </div>
             <div class="input-field col s6">
                 <input id="author" name="author" type="text" class="validate" required>
-                <label for="author">Author</label>
+                <label for="author" class="black-text">Author</label>
             </div>
             <div class="input-field col s6">
-                <label>Genre</label>
                 <select id="genre" name="genre_name"  required>
-                    <option value="" disabled selected></option>
+                    <option value="" disabled selected>Genre</option>
                     {% for gen in genre %}
                         <option value="{{gen.genre_name}}">{{gen.genre_name}}</option>
                     {% endfor %}
@@ -21,16 +20,16 @@
             </div>
             <div class="input-field col s6">
                 <input id="book_link" name="book_link" type="url" class="validate" required>
-                <label for="book_link">Link</label>
+                <label for="book_link" class="black-text">Link</label>
             </div>
             <div class="input-field col s12">
                 <textarea id="review" name="review" type="textarea" class="materialize-textarea" minlength="200" required></textarea>
-                <label for="review">Review</label>
+                <label for="review" class="black-text">Review</label>
                 <span class="helper-text" data-error="wrong" data-success="right">Minimum 200 letters</span>
             </div>
             <div class="send-margin">
-                <button class="btn waves-effect waves-light send-margin modal-trigger" data-target="submitted-modal" type="submit" name="action">Submit
-                    <i class="material-icons right">send</i>
+                <button class="btn waves-effect waves-light send-margin modal-trigger black-text" data-target="submitted-modal" type="submit" name="action">Submit
+                    <i class="material-icons right black-text">send</i>
                 </button>
                 <!-- Modal Structure -->
                 <div id="submitted-modal" class="modal">
