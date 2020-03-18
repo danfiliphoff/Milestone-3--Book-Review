@@ -11,8 +11,9 @@
                 <label for="author">Author</label>
             </div>
             <div class="input-field col s6">
-                <select id="genre" name="genre_name" required>
-                    <option value="" disabled selected>Genre</option>
+                <label>Genre</label>
+                <select id="genre" name="genre_name"  required>
+                    <option value="" disabled selected></option>
                     {% for gen in genre %}
                         <option value="{{gen.genre_name}}">{{gen.genre_name}}</option>
                     {% endfor %}
