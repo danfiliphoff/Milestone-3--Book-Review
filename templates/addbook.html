@@ -27,10 +27,9 @@
                 <label for="review" class="black-text">Review</label>
                 <span class="helper-text black-text" data-error="wrong" data-success="right">Minimum 200 letters</span>
             </div>
-            <div class="send-margin">
-                <!-- change to a href, take back to books -->
+            <div class="col s1">
                 <button class="btn waves-effect waves-light send-margin  black-text"  type="submit" name="action">Submit
-                    <i class="material-icons right black-text">send</i>
+                   <a href="{{url_for('get_books')}}" class="black-text"></a>
                 </button>
             </div>
         </div>
