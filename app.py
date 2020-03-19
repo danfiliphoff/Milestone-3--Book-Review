@@ -81,19 +81,24 @@ def downvote_book(book_id):
 
 @app.route('/upvote_book_genre/<book_id>')
 def upvote_book_genre(book_id):
+    books = mongo.db.books.find().sort("votes", -1)
+    genre = mongo.db.genre.find().sort("genre_name")
     mongo.db.books.update_one(
         {"_id": ObjectId(book_id)},
         {'$inc': {'votes': 1}},
     upsert=False)
-    return render_template("genre.html", books=mongo.db.books.find().sort("votes", -1))   
+    return render_template("genre.html", books=books, genre = genre)   
 
 @app.route('/downvote_book_genre/<book_id>')
 def downvote_book_genre(book_id):
+    books = mongo.db.books.find().sort("votes", -1)
+    genre = mongo.db.genre.find().sort("genre_name")
     mongo.db.books.update_one(
         {"_id": ObjectId(book_id)},
         {'$inc': {'votes': -1}},
     upsert=False)
-    return render_template("genre.html", books=mongo.db.books.find().sort("votes", -1))
+    return render_template("genre.html", books=books, genre = genre)
+
 
 
 if __name__ == '__main__':
