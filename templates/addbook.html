@@ -11,7 +11,7 @@
                 <label for="author" class="black-text">Author</label>
             </div>
             <div class="input-field col s6">
-                <select id="genre" name="genre_name"  required>
+                <select id="genre" name="genre_name" class="validate"  required>
                     <option value="" disabled selected>Genre</option>
                     {% for gen in genre %}
                         <option value="{{gen.genre_name}}">{{gen.genre_name}}</option>
