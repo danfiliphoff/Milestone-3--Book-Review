@@ -78,7 +78,7 @@ def delete_book_genre(book_id):
     mongo.db.books.remove({'_id': ObjectId(book_id)})
     return redirect(url_for('genres'))
 
-
+#Upvote functionality redirecting to books.html
 @app.route('/upvote_book/<book_id>')
 def upvote_book(book_id):
     mongo.db.books.update_one(
@@ -87,6 +87,7 @@ def upvote_book(book_id):
     upsert=False)
     return render_template("books.html", books=mongo.db.books.find().sort("votes", -1))   
 
+#Downvote functionality redirecting to books.html
 @app.route('/downvote_book/<book_id>')
 def downvote_book(book_id):
     mongo.db.books.update_one(
@@ -95,6 +96,7 @@ def downvote_book(book_id):
     upsert=False)
     return render_template("books.html", books=mongo.db.books.find().sort("votes", -1))
 
+#Upwnvote functionality redirecting to genre.html
 @app.route('/upvote_book_genre/<book_id>')
 def upvote_book_genre(book_id):
     books = mongo.db.books.find().sort("votes", -1)
@@ -105,6 +107,7 @@ def upvote_book_genre(book_id):
     upsert=False)
     return render_template("genre.html", books=books, genre = genre)   
 
+#Downvote functionality redirecting to genre.html
 @app.route('/downvote_book_genre/<book_id>')
 def downvote_book_genre(book_id):
     books = mongo.db.books.find().sort("votes", -1)
@@ -115,8 +118,7 @@ def downvote_book_genre(book_id):
     upsert=False)
     return render_template("genre.html", books=books, genre = genre)
 
-
-
+#Config variables heroku
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT', 3000)),
