@@ -4,7 +4,10 @@ A simple website where users can submit books with a brief coment and vote on th
 ##UX
 The site allows users to add, eddit and browse book reviews. Users can chose to browse books by cathegory to help  the user find the type of book 
 he/she is looking for. Users can add links to each book so that the book can easily be found and purchased on the webb. To help the users find the best books, a simple 
-voting system ranks the books. 
+voting system ranks the books. The users goal is to find good book reviews and get ideas on what books are worth reading.
+
+![Image of Wireframe]()
+
 
 ##Features
 
