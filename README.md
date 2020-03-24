@@ -31,7 +31,7 @@ All pages have been manualy tested as specified below:
 
 1. addbook.html 
     1. Try to submit form with one or several empty fields, should be unsucessful and give feedback on what field is missing.
-    2. Try to submit form with all fields fild in. book should apper on books.html page. 
+    2. Try to submit form with all fields fild in and go to books.html, book should apper on this page. 
 2. base.html- Go to each .html page and check that the home, add a book and genre buttons in the navbar all directs towards the correct page.
 Clicking on the "book review" should link to books.html.
 3. books.html
