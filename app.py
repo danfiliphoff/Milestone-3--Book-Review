@@ -63,10 +63,14 @@ def delete_book(book_id):
     mongo.db.books.remove({'_id': ObjectId(book_id)})
     return redirect(url_for('get_books'))
 
+
+
 @app.route('/delete_book_genre/<book_id>')
 def delete_book_genre(book_id):
     mongo.db.books.remove({'_id': ObjectId(book_id)})
-    return redirect(url_for('genre.html'))
+    return redirect(url_for('genres'))
+
+
 
 @app.route('/upvote_book/<book_id>')
 def upvote_book(book_id):
