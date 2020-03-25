@@ -1,19 +1,23 @@
 # Book Review
-A simple website where users can submit books with a brief coment and vote on the books submitted by others.
+A simple website where users can submit books with a review and vote on the reviews submitted by others.
 
 ## UX
 The site allows users to add, eddit and browse book reviews. Users can chose to browse books by cathegory to help  the user find the type of book 
-he/she is looking for. Users can add links to each book so that the book can easily be found and purchased on the webb. To help the users find the best books, a simple 
+he/she is looking for. Users can add links to each book so that the book can easily be found and on the webb. To help the users find the best books, a simple 
 voting system ranks the books. The users goal is to find good book reviews and get ideas on what books are worth reading.
 
+In the early stages of development the below wireframe was made as a general concept of how the site would look:
 ![Image of Wireframe](https://raw.githubusercontent.com/danfiliphoff/Milestone-3--Book-Review/master/static/readme_pictures/wireframe%20milestone3.PNG)
 
 
 ## Features
 
 ### Existing Features
-The main page shows all submitted books ranked after number of votes. The genre page allows a user to browse after books based on varoius cathegories. Both the genre and main page
-pressents the books on cards. Each card have an edit, vote, and link button for that particular book. The number of votes a review have recived is also displayed. Users can add books thrue a form accesed 
+The main page shows all submitted books ranked after number of votes. This allows the user to browse all books sorted after most votes.
+
+The genre page allows a user to browse after books based on varoius cathegories. Both the genre and main page
+pressents the books on cards. Each card have an edit, vote, and link button for that particular book. These buttons allows the user to vote, update the details for a book and find the book on the webb.
+The number of votes a review have recived is also displayed on the card. Users can add books thrue a form accesed 
 by the "add book" button in the nav bar. 
 
 ### Features left to implement
@@ -51,7 +55,12 @@ Clicking on the "book review" should link to books.html.
     5. Test the genre select by clicking it. If it works only books to the selected genre should display.
 
 ## Deployment
-This project have been deplyed using Heroku. Some environmental variables have been set as to protect the inegrity of the database. 
+This project have been deplyed using Heroku. An app was created in Heroku. The projects github repository was then conected to Heroku 
+so that all commits to the github master branch automaticaly updates the aplication in heroku. To allow heroku to run the application sucessfully
+an requirements file and a procfile have been included in the project. 
+
+Environmental variables containing the log in information to the database have been set. 
+
 
 ## Credits
 The example book reviews included in the site have been copied from wikipedia articals. 
