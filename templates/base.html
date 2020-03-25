@@ -6,6 +6,7 @@
 </head>
 <body class="#e3f2fd blue lighten-5">
     <div class="#e3f2fd blue lighten-5">
+        <!-- Nav Bar -->
         <header>
             <div class="navbar-fixed">        
                 <nav class="#64b5f6 blue lighten-2">
@@ -20,13 +21,15 @@
                     </div>
                 </nav>
             </div>
+                <!-- Mobile Nav Bar -->
                 <ul class="sidenav #64b5f6 blue lighten-2" id="mobile-nav">
                     <li><a href="{{url_for('get_books')}}" class="black-text">Home</a></li>
                     <li><a href="{{url_for('add_book')}}" class="black-text">Add a Book</a></li>
                     <li><a href="{{url_for('genres')}}" class="black-text">Genres</a></li>
                 </ul>
         </header>
-        {% block content %} {% endblock %}
+        {% block content %} 
+        {% endblock %}
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>

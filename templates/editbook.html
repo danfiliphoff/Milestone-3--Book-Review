@@ -2,16 +2,18 @@
 <div class="row">
     <form action="{{url_for('update_book', book_id=book._id)}}" method="POST" class="col s12">
         <div class="row">
+            <!-- Title Input -->
             <div class="input-field col s6">
                 <input id="name" name="name" type="text" class="validate" value="{{book.name}}" required>
                 <label for="name" class="black-text">Title</label>
             </div>
+            <!-- Author Input -->
             <div class="input-field col s6">
                 <input id="author" name="author" type="text" class="validate" value="{{book.author}}" required>
                 <label for="author" class="black-text">Author</label>
             </div>
-            <!--validera att något fält är valt-->
             <div class="input-field col s6">
+                <!-- Gnre Dropdown Select -->
                 <select id="genre" name="genre_name">
                     <option value="" disabled selected>Genre</option>
                     {% for gen in genre %}
@@ -23,17 +25,18 @@
                     {% endfor %}
                 </select>
             </div>
-            <!--validera att det är en länk -->
+            <!-- Link Input Field -->
             <div class="input-field col s6">
                 <input id="book_link" name="book_link" type="url" class="validate" value="{{book.book_link}}" required>
                 <label for="book_link" class="black-text">Link</label>
             </div>
-            <!--validera att reviewin inte är under 200 ord-->
+            <!-- Review Input Field -->
             <div class="input-field col s12">
                 <textarea id="review" name="review" type="textarea" class="materialize-textarea" minlength="200" required>{{book.review}}</textarea>
                 <label for="review" class="black-text">Review</label>
                 <span class="helper-text black-text" data-error="wrong" data-success="right">Minimum 200 letters</span>
             </div>
+            <!-- Submit Button -->
             <div class ="col s1">
                 <button class="btn waves-effect waves-light black-text" type="submit" name="action">Submit
                     <a href="{{url_for('get_books')}}" class="black-text"></a>
