@@ -65,7 +65,7 @@ Environmental variables containing the log in information to the database have b
 ## Credits
 The example book reviews included in the site have been copied from wikipedia articals. 
 
-# Acknowlegements
+## Acknowlegements
 This project was made possible thrue the suport of the tutors at code institute.
 
 
